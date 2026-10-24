@@ -8,9 +8,14 @@ common:
   update: Actualizar
   save: Guardar
   save-changes: Guardar Cambios
+  close-and-save: Cerrar y guardar
   delete: Eliminar
   delete-selected: Eliminar Seleccionados
   delete-selected-count: Eliminar {count} Seleccionados
+  your-profile: Tu perfil
+  date-of-birth: Fecha de nacimiento
+  organization: Organización
+  two-factor: Doble factor
   remove: Quitar
   cancel: Cancelar
   confirm: Confirmar
@@ -103,6 +108,7 @@ common:
   warning: Advertencia
   info: Información
   ready: Listo
+  activity: Actividad
   active: Activo
   inactive: Inactivo
   enabled: Habilitado
@@ -136,9 +142,11 @@ common:
   forgot-password: ¿Olvidaste tu contraseña?
   reset-password: Restablecer contraseña
   change-password: Cambiar contraseña
+  authentication: Autenticación
   password: Contraseña
   confirm-password: Confirmar contraseña
   email: Correo electrónico
+  phone: Teléfono
   username: Nombre de usuario
   remember-me: Recuérdame
   welcome: Bienvenido
@@ -178,6 +186,7 @@ common:
   notes: Notas
   reference: Referencia
   filter-by: Filtrar por
+  filter-by-field: Filtrar por {field}
   sort-by: Ordenar por
   ascending: Ascendente
   descending: Descendente
@@ -218,6 +227,7 @@ common:
   contact: Contacto
   documentation: Documentación
   language: Idioma
+  timezone: Zona horaria
   version: Versión
   theme: Tema
   light-mode: Modo claro
@@ -286,6 +296,8 @@ common:
   zoom-out: Alejar
   fullscreen: Pantalla completa
   exit-fullscreen: Salir de pantalla completa
+  yes: Sí
+  no: No
   true: 'true'
   false: 'false'
   ok: Aceptar
@@ -308,11 +320,11 @@ common:
   cancel-resource: Cancelar {resource}
   delete-resource: Eliminar {resource}
   delete-resource-name: 'Eliminar: {resourceName}'
+  resource-actions: Acciones de {resource}
+  resource-location: Ubicación de {resource}
   delete-resource-named: Eliminar {resource} ({resourceName})
-  delete-resource-prompt: Esta acción no se puede deshacer. Una vez eliminado, el
-    registro será eliminado permanentemente.
-  delete-cannot-be-undone: Esta acción no se puede deshacer. Una vez eliminado, el
-    registro será eliminado permanentemente.
+  delete-resource-prompt: Esta acción no se puede deshacer. Una vez eliminado, el registro será eliminado permanentemente.
+  delete-cannot-be-undone: Esta acción no se puede deshacer. Una vez eliminado, el registro será eliminado permanentemente.
   create-resource: Crear {resource}
   edit-resource: Editar {resource}
   edit-resource-details: Editar detalles de {resource}
@@ -330,8 +342,9 @@ common:
   resource-deleted-success: '{resource} ({resourceName}) eliminado con éxito.'
   resource-deleted: '{resource} ({resourceName}) eliminado.'
   continue-without-saving: ¿Continuar sin guardar?
-  continue-without-saving-prompt: Tienes cambios sin guardar en este {resource}. Continuar
-    descartará esos cambios. Haz clic en Continuar para proceder.
+  continue-without-saving-prompt: Tienes cambios sin guardar en este {resource}. Continuar descartará esos cambios. Haz clic en Continuar para proceder.
+  changelog: Registro de cambios
+  reload: Recargar
 resource:
   alert: Alerta
   alerts: Alertas
@@ -387,6 +400,7 @@ resource:
   user-devices: Dispositivos del usuario
   user: Usuario
   users: Usuarios
+  country: País
 dropzone:
   file: archivo
   drop-to-upload: Suelta para subir
@@ -396,17 +410,14 @@ dropzone:
   upload-documents: Subir documentos
   upload-documents-files: Subir documentos y archivos
   upload-avatar-files: Subir avatares personalizados
-  dropzone-supported-images-videos: Arrastra y suelta archivos de imagen y vídeo en
-    esta zona
+  dropzone-supported-images-videos: Arrastra y suelta archivos de imagen y vídeo en esta zona
   dropzone-supported-avatars: Arrastra y suelta archivos SVG o PNG
   dropzone-supported-files: Arrastra y suelta archivos en esta zona
   or-select-button-text: o selecciona archivos para subir.
   upload-queue: Cola de subida
   uploading: Subiendo...
 two-fa-enforcement-alert:
-  message: Para mejorar la seguridad de su cuenta, su organización requiere Autenticación
-    de Dos Factores (2FA). Active 2FA en la configuración de su cuenta para una capa
-    adicional de protección.
+  message: Para mejorar la seguridad de su cuenta, su organización requiere Autenticación de Dos Factores (2FA). Active 2FA en la configuración de su cuenta para una capa adicional de protección.
   button-text: Configurar 2FA
 comment-thread:
   publish-comment-button-text: Publicar comentario
@@ -429,12 +440,19 @@ dashboard:
   delete-dashboard: Eliminar panel
   save-dashboard: Guardar Panel
   you-cannot-delete-this-dashboard: No puedes eliminar este panel.
-  are-you-sure-you-want-delete-dashboard: ¿Estás seguro de que quieres eliminar este
-    {dashboardName}?
+  are-you-sure-you-want-delete-dashboard: ¿Estás seguro de que quieres eliminar este {dashboardName}?
 dashboard-widget-panel:
   widget-name: Widget {widgetName}
   select-widgets: Seleccionar Widgets
   close-and-save: Cerrar y Guardar
+  filter-widgets: Buscar widgets…
+  no-widgets-match: Ningún widget coincide con tus filtros.
+  tab-all: Todos
+  tab-default: Recomendados
+  tab-added: En el panel
+  badge-default: Predeterminado
+  add: Añadir
+  add-another: Añadir otro
 filters-picker:
   filters: Filtros
   filter-data: Filtrar Datos
@@ -463,17 +481,14 @@ component:
     upload-documents: Subir Documentos
     upload-documents-files: Subir Documentos y Archivos
     upload-avatar-files: Subir Avatares Personalizados
-    dropzone-supported-images-videos: Arrastra y suelta archivos de imagen y video
-      en esta zona
+    dropzone-supported-images-videos: Arrastra y suelta archivos de imagen y video en esta zona
     dropzone-supported-avatars: Arrastra y suelta archivos SVG o PNG
     dropzone-supported-files: Arrastra y suelta archivos en esta zona
     or-select-button-text: o selecciona archivos para subir.
     upload-queue: Cola de Subida
     uploading: Subiendo...
   two-fa-enforcement-alert:
-    message: Para mejorar la seguridad de tu cuenta, tu organización requiere Autenticación
-      de Dos Factores (2FA). Activa 2FA en la configuración de tu cuenta para una
-      capa adicional de protección.
+    message: Para mejorar la seguridad de tu cuenta, tu organización requiere Autenticación de Dos Factores (2FA). Activa 2FA en la configuración de tu cuenta para una capa adicional de protección.
     button-text: Configurar 2FA
   comment-thread:
     publish-comment-button-text: Publicar comentario
@@ -496,25 +511,22 @@ component:
     delete-dashboard: Eliminar panel
     save-dashboard: Guardar panel
     you-cannot-delete-this-dashboard: No puedes eliminar este panel.
-    are-you-sure-you-want-delete-dashboard: ¿Estás seguro de que quieres eliminar
-      {dashboardName}?
+    are-you-sure-you-want-delete-dashboard: ¿Estás seguro de que quieres eliminar {dashboardName}?
+    create-to-customize-hint: Crea un panel para personalizar los widgets.
   dashboard-widget-panel:
     widget-name: Widget {widgetName}
     select-widgets: Seleccionar widgets
     close-and-save: Cerrar y guardar
 services:
   dashboard-service:
-    create-dashboard-success-notification: Nuevo panel `{dashboardName}` creado con
-      éxito.
+    create-dashboard-success-notification: Nuevo panel `{dashboardName}` creado con éxito.
     delete-dashboard-success-notification: El panel `{dashboardName}` fue eliminado.
 auth:
   verification:
     header-title: Verificación de cuenta
     title: Verifica tu dirección de correo electrónico
-    message-text: <strong>¡Casi terminado!</strong><br> Revisa tu correo para un código
-      de verificación.
-    verification-code-text: Introduce el código de verificación que recibiste por
-      correo.
+    message-text: <strong>¡Casi terminado!</strong><br> Revisa tu correo para un código de verificación.
+    verification-code-text: Introduce el código de verificación que recibiste por correo.
     verification-input-label: Código de verificación
     verify-button-text: Verificar y continuar
     didnt-receive-a-code: ¿No has recibido un código?
@@ -527,36 +539,34 @@ auth:
     verify-code:
       verification-code: Código de verificación
       check-title: Revisa tu correo o teléfono
-      check-subtitle: Te hemos enviado un código de verificación. Introduce el código
-        abajo para completar el proceso de inicio de sesión.
-      expired-help-text: Tu código de autenticación 2FA ha expirado. Puedes solicitar
-        otro código si necesitas más tiempo.
+      check-subtitle: Te hemos enviado un código de verificación. Introduce el código abajo para completar el proceso de inicio de sesión.
+      expired-help-text: Tu código de autenticación 2FA ha expirado. Puedes solicitar otro código si necesitas más tiempo.
       resend-code: Reenviar código
       verify-code: Verificar código
       cancel-two-factor: Cancelar autenticación de dos factores
-      invalid-session-error-notification: Sesión inválida. Por favor, inténtalo de
-        nuevo.
+      invalid-session-error-notification: Sesión inválida. Por favor, inténtalo de nuevo.
       verification-successful-notification: ¡Verificación exitosa!
-      verification-code-expired-notification: El código de verificación ha expirado.
-        Por favor, solicita uno nuevo.
-      verification-code-failed-notification: La verificación falló. Por favor, inténtalo
-        de nuevo.
+      verification-code-expired-notification: El código de verificación ha expirado. Por favor, solicita uno nuevo.
+      verification-code-failed-notification: La verificación falló. Por favor, inténtalo de nuevo.
+      too-many-attempts-notification: Demasiados códigos incorrectos. Inicia sesión de nuevo.
+      authenticator-title: Abre tu aplicación de autenticación
+      authenticator-subtitle: Introduce el código de 6 dígitos que muestra tu aplicación de autenticación para esta cuenta.
+      recovery-code-title: Introduce un código de recuperación
+      recovery-code-subtitle: Usa uno de los códigos de recuperación que guardaste al configurar tu aplicación de autenticación. Cada código solo se puede usar una vez.
+      use-recovery-code: Usar un código de recuperación
+      use-authenticator-code: Usar tu aplicación de autenticación
+      send-code-instead: Enviarme un código en su lugar
     resend-code:
       verification-code-resent-notification: Nuevo código de verificación enviado.
-      verification-code-resent-error-notification: Error al reenviar el código de
-        verificación. Por favor, inténtalo de nuevo.
+      verification-code-resent-error-notification: Error al reenviar el código de verificación. Por favor, inténtalo de nuevo.
   forgot-password:
     success-message: ¡Revisa tu correo para continuar!
     is-sent:
       title: ¡Casi listo!
-      message: <strong>¡Revisa tu correo electrónico!</strong><br> Te hemos enviado
-        un enlace mágico a tu correo que te permitirá restablecer tu contraseña. El
-        enlace expira en 15 minutos.
+      message: <strong>¡Revisa tu correo electrónico!</strong><br> Te hemos enviado un enlace mágico a tu correo que te permitirá restablecer tu contraseña. El enlace expira en 15 minutos.
     not-sent:
       title: ¿Olvidaste tu contraseña?
-      message: <strong>No te preocupes, te respaldamos.</strong><br> Introduce el
-        correo electrónico que usas para iniciar sesión en {appName} y te enviaremos
-        un enlace seguro para restablecer tu contraseña.
+      message: <strong>No te preocupes, te respaldamos.</strong><br> Introduce el correo electrónico que usas para iniciar sesión en {appName} y te enviaremos un enlace seguro para restablecer tu contraseña.
     form:
       email-label: Tu dirección de correo electrónico
       submit-button: ¡OK, envíame un enlace mágico!
@@ -568,8 +578,7 @@ auth:
     unverified-notification: Tu cuenta necesita ser verificada para continuar.
     password-reset-required: Se requiere un restablecimiento de contraseña para continuar.
     failed-attempt:
-      message: <strong>¿Olvidaste tu contraseña?</strong><br> Haz clic en el botón
-        de abajo para restablecer tu contraseña.
+      message: <strong>¿Olvidaste tu contraseña?</strong><br> Haz clic en el botón de abajo para restablecer tu contraseña.
       button-text: ¡Ok, ayúdame a restablecerla!
     form:
       email-label: Correo electrónico
@@ -616,8 +625,7 @@ auth:
     slow-connection-message: Experimentando problemas de conectividad.
   reset-password:
     success-message: ¡Tu contraseña ha sido restablecida! Inicia sesión para continuar.
-    invalid-verification-code: Este enlace para restablecer la contraseña es inválido
-      o ha expirado.
+    invalid-verification-code: Este enlace para restablecer la contraseña es inválido o ha expirado.
     title: Restablece tu contraseña
     form:
       code:
@@ -642,6 +650,21 @@ auth:
         help-text: The confirmation code from your email.
       submit-button: Confirm Email Change
       back-button: Back
+  verify-contact:
+    invalid-link: Este enlace de verificación no es válido o ha caducado.
+    email-title: Verifica tu dirección de correo electrónico
+    phone-title: Verifica tu número de teléfono
+    email-message: Confirma que esta dirección de correo electrónico te pertenece.
+    phone-message: Confirma que este número de teléfono te pertenece.
+    email-verified: Tu dirección de correo electrónico está verificada.
+    phone-verified: Tu número de teléfono está verificado.
+    continue-button: Continuar
+    form:
+      code:
+        label: Código de verificación
+        help-text: El código de verificación de tu correo electrónico o mensaje de texto.
+      submit-button: Verificar
+      back-button: Atrás
 
 console:
   create-or-join-organization:
@@ -650,8 +673,7 @@ console:
     create-success-notification: ¡Has creado una nueva organización!
   switch-organization:
     modal-title: ¿Estás seguro de que quieres cambiar la organización a {organizationName}?
-    modal-body: Al confirmar, tu cuenta permanecerá iniciada, pero tu organización
-      principal será cambiada.
+    modal-body: Al confirmar, tu cuenta permanecerá iniciada, pero tu organización principal será cambiada.
     modal-accept-button-text: Sí, quiero cambiar de organización
     success-notification: Has cambiado de organización
   account:
@@ -666,6 +688,7 @@ console:
       organizations: Organizaciones
       branding: Imagen de marca
       2fa-config: Configuración 2FA
+      platform-api-token: Token de API de la plataforma
       schedule-monitor: Monitor de programación
       services: Servicios
       mail: Correo
@@ -706,6 +729,28 @@ console:
         title: Configuración de servicios
       socket:
         title: Configuración de socket
+    platform-api-token:
+      title: Token de API de la plataforma
+      description: Gestiona el token de API de la plataforma que usan las integraciones de confianza para acceder a endpoints protegidos de la plataforma, como el directorio de la organización.
+      loading: Cargando el estado del token de API de la plataforma...
+      status: Estado
+      configured: Configurado
+      not-configured: No configurado
+      last-rotated: Última rotación
+      last-used: Último uso
+      never: Nunca
+      generate-token: Generar token
+      rotate-token: Rotar token
+      revoke-token: Revocar token
+      one-time-warning: Copia este token ahora. No se volverá a mostrar.
+      rotate-confirm-title: ¿Rotar el token de API de la plataforma?
+      rotate-warning: Al rotar este token, se invalidan inmediatamente las integraciones que usan el token anterior.
+      revoke-confirm-title: ¿Revocar el token de API de la plataforma?
+      revoke-warning: Al revocarlo, se desactiva el acceso con el token de la plataforma a los endpoints protegidos de la plataforma.
+      generated: Token de API de la plataforma generado.
+      rotated: Token de API de la plataforma rotado.
+      revoked: Token de API de la plataforma revocado.
+      copied: Token de API de la plataforma copiado al portapapeles.
     branding:
       title: Identidad corporativa
       icon-text: Icono
@@ -750,19 +795,22 @@ console:
       select-timezone: Seleccione zona horaria.
   extensions:
     title: ¡Las extensiones llegarán pronto!
-    message: Por favor, vuelva a consultar en las próximas versiones mientras preparamos
-      el lanzamiento del repositorio y mercado de Extensiones.
+    message: Por favor, vuelva a consultar en las próximas versiones mientras preparamos el lanzamiento del repositorio y mercado de Extensiones.
   notifications:
     select-all: Seleccionar todo
     mark-as-read: Marcar como leído
     received: 'Recibido:'
     message: No hay notificaciones para mostrar.
+modals:
+  set-password:
+    message: Tu cuenta se creó a partir de una invitación y aún no tiene contraseña. Establece una ahora para terminar de proteger tu cuenta.
+    new-password: Nueva contraseña
+    confirm-password: Confirmar contraseña
+    help-text: Introduce una contraseña de al menos 6 caracteres para continuar.
 invite:
   for-users:
     invitation-message: Has sido invitado a unirte a {companyName}
-    invitation-sent-message: Has sido invitado a unirte a la organización {companyName}
-      en {appName}. Para aceptar esta invitación, introduce tu código de invitación
-      recibido por correo electrónico y haz clic en continuar.
+    invitation-sent-message: Has sido invitado a unirte a la organización {companyName} en {appName}. Para aceptar esta invitación, introduce tu código de invitación recibido por correo electrónico y haz clic en continuar.
     invitation-code-sent-text: Tu código de invitación
     accept-invitation-text: Aceptar invitación
 onboard:
@@ -777,31 +825,25 @@ onboard:
     phone: Número de teléfono
     phone-help-text: Tu número de teléfono
     organization-name: Nombre de la organización
-    organization-help-text: El nombre de tu organización, todos tus servicios y recursos
-      serán gestionados bajo esta organización, más adelante podrás crear tantas organizaciones
-      como quieras o necesites.
+    organization-help-text: El nombre de tu organización, todos tus servicios y recursos serán gestionados bajo esta organización, más adelante podrás crear tantas organizaciones como quieras o necesites.
     password: Introduce una contraseña
     password-help-text: Tu contraseña, asegúrate de que sea buena.
     confirm-password: Confirma tu contraseña
-    confirm-password-help-text: Solo para confirmar la contraseña que introdujiste
-      arriba.
+    confirm-password-help-text: Solo para confirmar la contraseña que introdujiste arriba.
     oauth-verified: 'Su identidad está verificada. No necesita contraseña: iniciará sesión con su proveedor.'
     oauth-divider: 'O regístrese con su correo'
     continue-button-text: Continuar
   verify-email:
     header-title: Verificación de cuenta
     title: Verifica tu dirección de correo electrónico
-    message-text: <strong>¡Casi terminado!</strong><br> Revisa tu correo electrónico
-      para un código de verificación.
-    verification-code-text: Introduce el código de verificación que recibiste por
-      correo electrónico.
+    message-text: <strong>¡Casi terminado!</strong><br> Revisa tu correo electrónico para un código de verificación.
+    verification-code-text: Introduce el código de verificación que recibiste por correo electrónico.
     verification-input-label: Código de verificación
     verify-button-text: Verificar y continuar
     didnt-receive-a-code: ¿No has recibido un código todavía?
     not-sent:
       message: ¿No has recibido un código todavía?
-      alternative-choice: Usa las opciones alternativas a continuación para verificar
-        tu cuenta.
+      alternative-choice: Usa las opciones alternativas a continuación para verificar tu cuenta.
       resend-email: Reenviar correo electrónico
       send-by-sms: Enviar por SMS
 install:
