@@ -1,0 +1,8 @@
+{
+  "sourceLocale": "en-us",
+  "targetLocales": ["es-es"],
+  "files": [
+    { "source": "console/translations/en-us.yaml", "target": "console/translations/{locale}.yaml" }
+  ],
+  "doNotTranslate": ["Fleetbase", "Fleet-Ops", "FleetOps"]
+}
